@@ -176,32 +176,37 @@
     <section class="section section--rule" id="entregas">
       <div class="wrap">
         <h2>O que entrego</h2>
-        <div class="rows">
-          <div class="row">
-            <h3>Automação E2E, funcional, regressiva e de performance</h3>
-            <p>Suítes estáveis que reduzem a regressão manual e as falhas em produção, em web e mobile.</p>
-            <p class="row__tools">Playwright, Cypress, Appium, k6</p>
+        <p class="section__lead">Do requisito à entrega, tudo rodando em pipeline.</p>
+
+        <div class="graph">
+          <div class="stage">
+            <p class="stage__name">Planejar</p>
+            <div class="stage__jobs">
+              <div class="job"><span class="job__ok">✔</span><div><b>Cenários BDD</b><small>Gherkin, Cucumber</small></div></div>
+            </div>
           </div>
-          <div class="row">
-            <h3>Testes manuais estratégicos</h3>
-            <p>Exploração, usabilidade e validação de casos críticos, onde o olhar humano encontra o que o script não vê.</p>
-            <p class="row__tools">Exploratórios, usabilidade, regressão</p>
+
+          <div class="stage">
+            <p class="stage__name">Validar em paralelo</p>
+            <div class="stage__jobs">
+              <div class="job"><span class="job__ok">✔</span><div><b>APIs e dados</b><small>Postman, Swagger, GraphQL, SQL, MongoDB</small></div></div>
+              <div class="job"><span class="job__ok">✔</span><div><b>E2E web</b><small>Playwright, Cypress</small></div></div>
+              <div class="job"><span class="job__ok">✔</span><div><b>Mobile</b><small>Appium, Android, iOS</small></div></div>
+              <div class="job"><span class="job__ok">✔</span><div><b>Carga</b><small>k6</small></div></div>
+            </div>
           </div>
-          <div class="row">
-            <h3>Shift Left</h3>
-            <p>Qualidade desde o design e o desenvolvimento, para reduzir bugs em produção e o custo de corrigir.</p>
-            <p class="row__tools">BDD, Gherkin, Cucumber</p>
+
+          <div class="stage">
+            <p class="stage__name">Explorar e liberar</p>
+            <div class="stage__jobs">
+              <div class="job"><span class="job__ok">✔</span><div><b>Testes manuais</b><small>Exploratórios, usabilidade, casos críticos</small></div></div>
+            </div>
           </div>
-          <div class="row">
-            <h3>Pipelines QAOps resilientes</h3>
-            <p>Testes como parte do pipeline de entrega, com execução paralela, ambientes em contêineres e feedback rápido.</p>
-            <p class="row__tools">GitHub Actions, GitLab CI, Azure DevOps, Jenkins, Docker</p>
-          </div>
-          <div class="row">
-            <h3>APIs, dados e cenários de carga</h3>
-            <p>Contratos e fluxos de API validados, dados conferidos no banco e testes de carga com visão estratégica.</p>
-            <p class="row__tools">Postman, Swagger, GraphQL, SQL, MongoDB, k6</p>
-          </div>
+        </div>
+
+        <div class="runner">
+          <span class="runner__label">roda em</span>
+          <span>GitHub Actions</span><span>GitLab CI</span><span>Azure DevOps</span><span>Jenkins</span><span>Docker</span>
         </div>
       </div>
     </section>
