@@ -15,86 +15,79 @@ menu.querySelectorAll('a').forEach(a =>
 // Ano no rodapé
 document.getElementById('ano').textContent = new Date().getFullYear();
 
-// Fundo interativo: malha de pontos (pontos de teste) que reage ao mouse
+// Fundo interativo: malha de pontos que reage ao mouse (só desenha a região ativa)
 (() => {
   const cv = document.getElementById('bg');
   if (!cv) return;
   const ctx = cv.getContext('2d');
+  const glow = document.getElementById('glow');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const GAP = 36, R = 170;
-  let w, h, dpr, dots = [], t = 0;
-  const m = { x: -9999, y: -9999, sx: -9999, sy: -9999, on: false };
+  let w, h, cols, dots = [], raf = 0;
+  const active = new Set();
+  const m = { x: 0, y: 0, sx: 0, sy: 0, on: false };
 
   function build() {
-    dpr = Math.min(devicePixelRatio || 1, 2);
+    const dpr = Math.min(devicePixelRatio || 1, 1.5);
     w = innerWidth; h = innerHeight;
     cv.width = w * dpr; cv.height = h * dpr;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    dots = [];
+    dots = []; active.clear();
+    cols = Math.ceil(w / GAP) + 1;
     for (let y = GAP / 2; y < h + GAP; y += GAP)
       for (let x = GAP / 2; x < w + GAP; x += GAP)
-        dots.push({ ox: x, oy: y, x, y, vx: 0, vy: 0, p: Math.random() * 6.28 });
+        dots.push({ ox: x, oy: y, x, y, vx: 0, vy: 0, near: 0 });
   }
 
-  function draw() {
-    t += 0.004;
+  function frame() {
+    raf = 0;
+    m.sx += (m.x - m.sx) * 0.18; m.sy += (m.y - m.sy) * 0.18;
+    glow.style.transform = `translate(${m.sx}px,${m.sy}px)`;
+    if (m.on) {
+      const c0 = Math.max(0, Math.floor((m.sx - R) / GAP)), c1 = Math.min(cols - 1, Math.ceil((m.sx + R) / GAP));
+      const r0 = Math.max(0, Math.floor((m.sy - R) / GAP)), r1 = Math.ceil((m.sy + R) / GAP);
+      for (let r = r0; r <= r1; r++)
+        for (let c = c0; c <= c1; c++) { const d = dots[r * cols + c]; if (d) active.add(d); }
+    }
     ctx.clearRect(0, 0, w, h);
-    // brilhos abstratos à deriva
-    const blobs = [
-      [0.2 + Math.sin(t) * 0.08, 0.25 + Math.cos(t * 0.8) * 0.1, 420, 'rgba(255,182,39,0.055)'],
-      [0.8 + Math.cos(t * 0.7) * 0.07, 0.7 + Math.sin(t * 0.9) * 0.1, 480, 'rgba(255,140,40,0.04)'],
-    ];
-    for (const [bx, by, br, col] of blobs) {
-      const g = ctx.createRadialGradient(bx * w, by * h, 0, bx * w, by * h, br);
-      g.addColorStop(0, col); g.addColorStop(1, 'rgba(255,182,39,0)');
-      ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
-    }
-    // mouse suavizado
-    m.sx += (m.x - m.sx) * 0.12; m.sy += (m.y - m.sy) * 0.12;
-    if (m.on) {
-      const g = ctx.createRadialGradient(m.sx, m.sy, 0, m.sx, m.sy, 260);
-      g.addColorStop(0, 'rgba(255,182,39,0.10)'); g.addColorStop(1, 'rgba(255,182,39,0)');
-      ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
-    }
-    for (const d of dots) {
+    const lit = [];
+    for (const d of active) {
       const dx = d.x - m.sx, dy = d.y - m.sy, dist = Math.hypot(dx, dy);
-      let near = 0;
-      if (m.on && dist < R) {
-        near = 1 - dist / R;
-        const f = near * near * 1.6;
-        d.vx += (dx / (dist || 1)) * f; d.vy += (dy / (dist || 1)) * f;
-      }
+      d.near = m.on && dist < R ? 1 - dist / R : 0;
+      if (d.near) { const f = d.near * d.near * 1.6; d.vx += (dx / (dist || 1)) * f; d.vy += (dy / (dist || 1)) * f; }
       d.vx += (d.ox - d.x) * 0.06; d.vy += (d.oy - d.y) * 0.06;
-      d.vx *= 0.82; d.vy *= 0.82;
-      d.x += d.vx; d.y += d.vy;
-      const base = 0.10 + 0.05 * Math.sin(t * 6 + d.p);
-      ctx.fillStyle = near > 0 ? `rgba(255,182,39,${Math.min(0.9, base + near * 0.8)})` : `rgba(210,220,212,${base})`;
-      ctx.beginPath(); ctx.arc(d.x, d.y, 1.1 + near * 1.8, 0, 6.283); ctx.fill();
+      d.vx *= 0.82; d.vy *= 0.82; d.x += d.vx; d.y += d.vy;
+      const moved = Math.abs(d.x - d.ox) + Math.abs(d.y - d.oy) + Math.abs(d.vx) + Math.abs(d.vy);
+      if (!d.near && moved < 0.15) { d.x = d.ox; d.y = d.oy; d.vx = d.vy = 0; active.delete(d); continue; }
+      ctx.fillStyle = `rgba(255,182,39,${Math.min(0.9, 0.18 + d.near * 0.75)})`;
+      ctx.beginPath(); ctx.arc(d.x, d.y, 1.2 + d.near * 1.8, 0, 6.283); ctx.fill();
+      if (d.near > 0.15) lit.push(d);
     }
-    // linhas finas entre pontos próximos ao cursor
-    if (m.on) {
-      ctx.lineWidth = 1;
-      const act = dots.filter(d => Math.hypot(d.x - m.sx, d.y - m.sy) < R * 0.9);
-      for (let i = 0; i < act.length; i++)
-        for (let k = i + 1; k < act.length; k++) {
-          const a = act[i], b = act[k], dd = Math.hypot(a.x - b.x, a.y - b.y);
-          if (dd < GAP * 1.5) {
-            const al = (1 - Math.hypot((a.x + b.x) / 2 - m.sx, (a.y + b.y) / 2 - m.sy) / R) * 0.35;
-            if (al > 0) { ctx.strokeStyle = `rgba(255,182,39,${al})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
-          }
-        }
-    }
-    if (!reduce) requestAnimationFrame(draw);
+    ctx.lineWidth = 1;
+    for (let i = 0; i < lit.length; i++)
+      for (let k = i + 1; k < lit.length; k++) {
+        const a = lit[i], b = lit[k];
+        if (Math.abs(a.ox - b.ox) + Math.abs(a.oy - b.oy) > GAP * 1.5) continue;
+        const al = Math.min(a.near, b.near) * 0.4;
+        ctx.strokeStyle = `rgba(255,182,39,${al})`;
+        ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+      }
+    if (m.on || active.size) raf = requestAnimationFrame(frame);
   }
+  const kick = () => { if (!raf) raf = requestAnimationFrame(frame); };
 
-  addEventListener('pointermove', e => {
-    if (e.pointerType === 'touch') return;
-    m.x = e.clientX; m.y = e.clientY;
-    if (!m.on) { m.sx = m.x; m.sy = m.y; m.on = true; }
-  });
-  document.addEventListener('pointerleave', () => { m.on = false; });
-  addEventListener('resize', build);
-  build(); draw();
+  if (!reduce) {
+    addEventListener('pointermove', e => {
+      if (e.pointerType === 'touch') return;
+      m.x = e.clientX; m.y = e.clientY;
+      if (!m.on) { m.sx = m.x; m.sy = m.y; m.on = true; glow.classList.add('on'); }
+      kick();
+    }, { passive: true });
+    document.addEventListener('pointerleave', () => { m.on = false; glow.classList.remove('on'); kick(); });
+    document.addEventListener('visibilitychange', () => { if (document.hidden) m.on = false; });
+    addEventListener('resize', build);
+    build();
+  }
 })();
 
 // Entrada suave dos blocos ao rolar
