@@ -3,214 +3,243 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lizarb | QA Sênior</title>
-  <meta name="description" content="Lizarb — QA Sênior com 10+ anos de experiência. Automação E2E com Cypress e Playwright, testes de API, pipelines QAOps, testes mobile e performance com k6." />
-  <meta property="og:title" content="Lizarb | QA Sênior" />
-  <meta property="og:description" content="Qualidade desde o início do desenvolvimento: automação, APIs, QAOps e testes mobile." />
+  <title>Lizarb | Senior QA Engineer &amp; Test Automation Lead</title>
+  <meta name="description" content="Lizarb — Senior QA Engineer e Test Automation Lead com mais de 10 anos de experiência. Playwright, Cypress, TypeScript, QAOps, APIs, mobile e k6." />
+  <meta property="og:title" content="Lizarb | Senior QA Engineer &amp; Test Automation Lead" />
+  <meta property="og:description" content="Qualidade desde o início do desenvolvimento: automação E2E, APIs, QAOps, mobile e performance." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0b1020" />
+  <meta name="theme-color" content="#0e100f" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230e100f'/%3E%3Cpath d='M14 20l16 12-16 12' fill='none' stroke='%233ddc84' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M34 46h18' stroke='%233ddc84' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ============ NAV ============ -->
   <header class="nav" id="topo">
-    <div class="container nav__inner">
-      <a href="#inicio" class="brand"><span class="brand__mark">LZ</span> Lizarb</a>
-      <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <div class="wrap nav__inner">
+      <a href="#inicio" class="brand"><span class="brand__prompt">~/</span>lizarb</a>
+      <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
       <nav class="nav__links" id="menu">
         <a href="#inicio">Início</a>
         <a href="#atuacao">Como atuo</a>
-        <a href="#perfil">Perfil</a>
+        <a href="#trajetoria">Trajetória</a>
         <a href="#entregas">Entregas</a>
-        <a href="#competencias">Competências</a>
-        <a href="#contato" class="btn btn--small">Contato</a>
+        <a href="#stack">Stack e formação</a>
+        <a href="#contato" class="nav__cta">Contato</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- ============ HERO ============ -->
+    <!-- ============ INÍCIO ============ -->
     <section class="hero" id="inicio">
-      <div class="container hero__grid">
-        <div class="hero__text reveal">
-          <span class="eyebrow">QA Sênior · Automação · QAOps</span>
-          <h1>Qualidade que nasce <span class="grad">no início</span> do desenvolvimento, não no fim.</h1>
-          <p class="lead">
-            Mais de <strong>10 anos</strong> garantindo a qualidade de produtos de multinacionais.
-            Combino <strong>testes manuais</strong> (exploratórios, usabilidade, casos críticos) com
-            <strong>automação</strong> em Cypress e Playwright, valido <strong>APIs</strong>,
-            construo <strong>pipelines QAOps</strong> e levo qualidade para o código desde o refinamento
-            (<em>Shift Left</em>).
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="hero__role">Senior QA Engineer &amp; Test Automation Lead</p>
+          <h1>Qualidade desde o início do desenvolvimento, não no fim.</h1>
+          <p class="hero__lead">
+            Mais de 10 anos transformando qualidade em vantagem competitiva: automação E2E, testes manuais estratégicos,
+            pipelines QAOps e a prática de Shift Left, que reduz bugs em produção e acelera releases de produtos
+            web, mobile e de APIs.
           </p>
           <div class="hero__cta">
-            <a href="#atuacao" class="btn">Como atuo →</a>
-            <a href="#contato" class="btn btn--ghost">Vamos conversar</a>
-          </div>
-          <div class="chips">
-            <span>Cypress</span><span>Playwright</span><span>API</span><span>QAOps</span><span>Mobile</span><span>k6</span><span>Shift Left</span>
+            <a href="#trajetoria" class="btn btn--solid">Ver trajetória</a>
+            <a href="#contato" class="btn">Entrar em contato</a>
           </div>
         </div>
 
-        <div class="terminal reveal" aria-hidden="true">
-          <div class="terminal__bar"><i></i><i></i><i></i><span>~/portfolio</span></div>
-          <pre id="term"><span class="p">$</span> npx playwright test --project=chromium
-<span class="ok">✔</span> login.spec.ts .......... passou
-<span class="ok">✔</span> checkout.spec.ts ....... passou
-<span class="ok">✔</span> api/contracts.spec.ts .. passou
-
-<span class="p">$</span> k6 run load-test.js
-<span class="ok">✔</span> thresholds ............. ok
-
-<span class="p">$</span> git push origin main
-<span class="ok">✔</span> pipeline: lint → e2e → deploy
-<span class="cursor">▋</span></pre>
+        <div class="term" aria-label="Resumo do perfil em formato de terminal">
+          <div class="term__bar"><span></span><span></span><span></span><b>lizarb ~ perfil</b></div>
+          <div class="term__body">
+            <p class="l c" style="--i:0"><span class="p">$</span> lizarb --quem</p>
+            <p class="l o" style="--i:1">Senior QA Engineer &amp; Test Automation Lead</p>
+            <p class="l o" style="--i:2">SDET, mais de 10 anos de experiência</p>
+            <p class="l c" style="--i:3"><span class="p">$</span> lizarb --stack</p>
+            <p class="l o" style="--i:4">Playwright  Cypress  TypeScript  Appium</p>
+            <p class="l o" style="--i:5">Cucumber  Postman  GraphQL  k6  Docker</p>
+            <p class="l c" style="--i:6"><span class="p">$</span> lizarb --pipelines</p>
+            <p class="l o" style="--i:7">GitHub Actions  GitLab CI  Azure DevOps  Jenkins</p>
+            <p class="l c" style="--i:8"><span class="p">$</span> lizarb --atuacao</p>
+            <p class="l o" style="--i:9">remoto, Brasil e exterior</p>
+            <p class="l c" style="--i:10"><span class="p">$</span> <span class="cursor"></span></p>
+          </div>
         </div>
-      </div>
-
-      <div class="container stats reveal">
-        <div><strong>10+</strong><span>anos em qualidade de software</span></div>
-        <div><strong>E2E · API · Mobile</strong><span>cobertura ponta a ponta</span></div>
-        <div><strong>4</strong><span>plataformas de CI/CD</span></div>
-        <div><strong>3</strong><span>certificações</span></div>
       </div>
     </section>
 
     <!-- ============ COMO ATUO ============ -->
     <section class="section" id="atuacao">
-      <div class="container">
-        <span class="eyebrow">Como atuo como QA</span>
-        <h2>Qualidade é responsabilidade do time, não de uma etapa.</h2>
-        <p class="sub">Meu trabalho não começa quando a tarefa chega em teste. Atuo junto de Produto e Desenvolvimento desde o refinamento, para o time inteiro entregar a mesma coisa.</p>
+      <div class="wrap">
+        <h2>Como atuo</h2>
+        <p class="section__lead">Meu trabalho não começa quando a tarefa chega em teste. Participo desde o design e o refinamento, junto de Produto e Desenvolvimento, para o time inteiro entregar a mesma coisa.</p>
 
-        <div class="flow reveal">
-          <div><b>Produto</b><small>regra de negócio</small></div><span>⇄</span>
-          <div class="flow__qa"><b>QA</b><small>questiona e valida</small></div><span>⇄</span>
-          <div><b>Dev</b><small>solução e testes</small></div><span>→</span>
-          <div class="flow__qa"><b>QA</b><small>valida antes de liberar</small></div><span>→</span>
+        <div class="pipe" role="img" aria-label="Fluxo: Produto e QA e Dev, depois QA, depois usuário">
+          <div><b>Produto</b><small>regra de negócio</small></div><i>⇄</i>
+          <div class="pipe__qa"><b>QA</b><small>questiona e valida</small></div><i>⇄</i>
+          <div><b>Dev</b><small>solução e testes</small></div><i>&gt;</i>
+          <div class="pipe__qa"><b>QA</b><small>valida antes de liberar</small></div><i>&gt;</i>
           <div><b>Usuário</b><small>recebe valor</small></div>
         </div>
 
-        <div class="grid grid--3">
-          <article class="card reveal"><em>01 · shift-left</em><h3>Qualidade desde o início</h3><p>Analiso demandas antes do código: ambiguidades, exceções e riscos aparecem quando ainda é barato corrigir.</p></article>
-          <article class="card reveal"><em>02 · automação</em><h3>Testes que escalam</h3><p>Suítes E2E estáveis em Cypress e Playwright, com padrões de projeto, dados controlados e execução paralela.</p></article>
-          <article class="card reveal"><em>03 · qaops</em><h3>Qualidade no pipeline</h3><p>Testes rodando a cada commit em Jenkins, Azure DevOps, GitLab e GitHub Actions, com feedback rápido para o time.</p></article>
-          <article class="card reveal"><em>04 · equilíbrio</em><h3>Automação + manual</h3><p>Automatizo o que vale a pena repetir. O tempo restante vai para exploratório, usabilidade e casos críticos.</p></article>
-          <article class="card reveal"><em>05 · confiabilidade</em><h3>Performance e APIs</h3><p>Contratos validados com Postman e Swagger, e testes de carga com k6 para garantir escalabilidade.</p></article>
-          <article class="card reveal"><em>06 · cultura</em><h3>Melhoria contínua</h3><p>Visão analítica e orientada a resultados, com Six Sigma Yellow Belt aplicado à qualidade de processos.</p></article>
+        <div class="principles">
+          <div><h3>Qualidade desde o início</h3><p>Analiso demandas antes do código. Ambiguidades, exceções e riscos aparecem quando ainda é barato corrigir. É o Shift Left aplicado ao dia a dia.</p></div>
+          <div><h3>Automação que escala</h3><p>Suítes E2E estáveis em Playwright e Cypress, com dados controlados, execução paralela e cenários escritos em BDD.</p></div>
+          <div><h3>Qualidade dentro do pipeline</h3><p>Testes rodando a cada alteração em GitHub Actions, GitLab CI, Azure DevOps e Jenkins, com feedback rápido para o time.</p></div>
+          <div><h3>Automação e testes manuais juntos</h3><p>Automatizo o que vale a pena repetir. O restante do tempo vai para exploração, usabilidade e validação de casos críticos.</p></div>
+          <div><h3>APIs, dados e carga</h3><p>Contratos validados com Postman e Swagger, dados conferidos em SQL e MongoDB, e cenários de carga com k6 para garantir escala.</p></div>
+          <div><h3>Melhoria contínua</h3><p>Perfil analítico e orientado a resultados, com Six Sigma Yellow Belt aplicado à qualidade dos processos.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- ============ PERFIL ============ -->
-    <section class="section section--alt" id="perfil">
-      <div class="container profile">
-        <div class="reveal">
-          <span class="eyebrow">Perfil profissional</span>
-          <h2>Técnica e processo no mesmo teste.</h2>
-          <p>Sou <strong>Senior QA Engineer</strong> com mais de 10 anos de experiência, transformando qualidade em software por meio de automação, práticas modernas de engenharia e metodologias ágeis, em produtos de multinacionais com foco em confiabilidade, escalabilidade e eficiência.</p>
-          <p>Tenho forte atuação em <strong>ambientes distribuídos</strong> e na integração de pipelines, contribuindo diretamente para a estabilidade e a entrega contínua. Meu perfil é analítico e orientado a resultados, com foco constante em evolução técnica e em acompanhar as tendências do mercado.</p>
-          <div class="pills">
-            <div><strong>10+ anos</strong><span>em QA e automação</span></div>
-            <div><strong>MBA</strong><span>formação</span></div>
-            <div><strong>AZ-900 · AppSec · Six Sigma</strong><span>certificações</span></div>
-          </div>
-        </div>
+    <!-- ============ TRAJETÓRIA ============ -->
+    <section class="section section--rule" id="trajetoria">
+      <div class="wrap">
+        <h2>Trajetória</h2>
+        <p class="section__lead">Mais de 10 anos em QA, de testes funcionais e BDD em software de gestão até liderança técnica de automação, pipelines e qualidade em times remotos.</p>
 
-        <aside class="timeline reveal">
-          <h3>Trajetória</h3>
-          <div class="tl">
-            <time>nov. 2025 – jun. 2026</time>
-            <h4>Senior QA Automation Engineer · Babel</h4>
-            <p class="tl__meta">Remoto · Portugal</p>
-            <ul>
-              <li>Testes funcionais, exploratórios e de regressão em aplicações web</li>
-              <li>Planejamento, execução e acompanhamento de cenários ao longo de todo o ciclo de desenvolvimento</li>
-              <li>Validação e análise de dados com consultas SQL</li>
-              <li>Investigação de defeitos, em contato direto com Desenvolvimento e Produto</li>
-            </ul>
-          </div>
-          <div class="tl">
-            <time>nov. 2024 – mar. 2025</time>
-            <h4>Senior QA Engineer · Avenue Code</h4>
-            <p class="tl__meta">Remoto</p>
-            <ul>
-              <li>Testes funcionais, exploratórios e de regressão em aplicações mobile, em iOS e Android</li>
-              <li>Validação de dados com consultas SQL</li>
-              <li>Análise de defeitos durante o ciclo de desenvolvimento</li>
-              <li>Garantia de qualidade e estabilidade das aplicações antes das entregas</li>
-            </ul>
-          </div>
-        </aside>
+        <ol class="timeline">
+          <li>
+            <time>nov. 2025 a jun. 2026</time>
+            <div>
+              <h3>Senior QA Automation Engineer</h3>
+              <p class="timeline__org">Babel, remoto em Portugal</p>
+              <ul>
+                <li>Testes funcionais, exploratórios e de regressão em aplicações web.</li>
+                <li>Planejamento, execução e acompanhamento de cenários ao longo de todo o ciclo de desenvolvimento.</li>
+                <li>Validação e análise de dados com consultas SQL.</li>
+                <li>Investigação de defeitos, em contato direto com Desenvolvimento e Produto.</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <time>nov. 2024 a mar. 2025</time>
+            <div>
+              <h3>Senior QA Engineer</h3>
+              <p class="timeline__org">Avenue Code, remoto</p>
+              <ul>
+                <li>Testes funcionais, exploratórios e de regressão em aplicações mobile, em iOS e Android.</li>
+                <li>Validação de dados com consultas SQL e análise de defeitos durante o ciclo de desenvolvimento.</li>
+                <li>Garantia de qualidade e estabilidade das aplicações antes das entregas.</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <time>dez. 2022 a nov. 2024</time>
+            <div>
+              <h3>Senior Quality Assurance</h3>
+              <p class="timeline__org">Juntos Somos Mais, remoto no Brasil</p>
+              <ul>
+                <li>Testes automatizados E2E com Cypress e testes de API com Postman.</li>
+                <li>Integração da automação ao CI/CD com Azure DevOps, usando Docker nos pipelines para otimizar o build.</li>
+                <li>Validação de integridade e consistência de dados em SQL Server e MongoDB.</li>
+                <li>Trabalho em squads ágeis e documentação técnica com o modelo C4.</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <time>abr. 2022 a out. 2023</time>
+            <div>
+              <h3>Senior Quality Assurance Lead</h3>
+              <p class="timeline__org">Beedoo, Brasil</p>
+              <ul>
+                <li>Liderança técnica da equipe de QA e definição da estratégia de automação.</li>
+                <li>Automação com Cypress e TypeScript, e pipelines de CI/CD com Jenkins.</li>
+                <li>Estratégia de testes com BDD e Gherkin, mais mentoria para a equipe de qualidade.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+
+        <details class="earlier">
+          <summary>Experiências anteriores</summary>
+          <ul>
+            <li><b>Senior QA Engineer, Avenue Code</b> (jul. a dez. 2022): automação front-end e back-end com Cypress e validação de fluxos críticos de transações bancárias.</li>
+            <li><b>Analista de QA, Adsoft Gestão Empresarial</b> (2015 a 2018): cenários e casos de teste alinhados às regras de negócio, com BDD em aplicativos Android e software desktop para bares e restaurantes.</li>
+          </ul>
+        </details>
       </div>
     </section>
 
     <!-- ============ ENTREGAS ============ -->
-    <section class="section" id="entregas">
-      <div class="container">
-        <span class="eyebrow">Resultados que entrego</span>
-        <h2>O que eu coloco de pé nos times.</h2>
-        <div class="grid grid--2">
-          <article class="project reveal">
-            <div class="project__tag">01 · E2E</div>
-            <h3>Testes end-to-end completos</h3>
-            <p>Suítes em Cypress e Playwright com BDD (Cucumber), page objects e execução em CI, reduzindo regressão manual e falhas em produção.</p>
-            <div class="chips chips--sm"><span>Cypress</span><span>Playwright</span><span>Cucumber</span><span>TypeScript</span></div>
-          </article>
-          <article class="project reveal">
-            <div class="project__tag">02 · API</div>
-            <h3>Validação robusta de APIs</h3>
-            <p>Testes de contrato e de fluxo com Postman e Swagger, incluindo GraphQL e validação de dados em MySQL e SQL Server.</p>
-            <div class="chips chips--sm"><span>Postman</span><span>Swagger</span><span>GraphQL</span><span>SQL</span></div>
-          </article>
-          <article class="project reveal">
-            <div class="project__tag">03 · QAOps</div>
-            <h3>Pipelines de qualidade</h3>
-            <p>Implementação e evolução de pipelines com gates de qualidade, execução paralela e ambientes em contêineres.</p>
-            <div class="chips chips--sm"><span>Jenkins</span><span>Azure DevOps</span><span>GitLab</span><span>GitHub Actions</span><span>Docker</span></div>
-          </article>
-          <article class="project reveal">
-            <div class="project__tag">04 · Mobile & Performance</div>
-            <h3>Estabilidade e experiência do usuário</h3>
-            <p>Testes móveis em Android e iOS com foco em estabilidade, e testes de carga com k6 para validar escalabilidade.</p>
-            <div class="chips chips--sm"><span>Android</span><span>iOS</span><span>k6</span></div>
-          </article>
+    <section class="section section--rule" id="entregas">
+      <div class="wrap">
+        <h2>O que entrego</h2>
+        <div class="rows">
+          <div class="row">
+            <h3>Automação E2E, funcional, regressiva e de performance</h3>
+            <p>Suítes estáveis que reduzem a regressão manual e as falhas em produção, em web e mobile.</p>
+            <p class="row__tools">Playwright, Cypress, Appium, k6</p>
+          </div>
+          <div class="row">
+            <h3>Testes manuais estratégicos</h3>
+            <p>Exploração, usabilidade e validação de casos críticos, onde o olhar humano encontra o que o script não vê.</p>
+            <p class="row__tools">Exploratórios, usabilidade, regressão</p>
+          </div>
+          <div class="row">
+            <h3>Shift Left</h3>
+            <p>Qualidade desde o design e o desenvolvimento, para reduzir bugs em produção e o custo de corrigir.</p>
+            <p class="row__tools">BDD, Gherkin, Cucumber</p>
+          </div>
+          <div class="row">
+            <h3>Pipelines QAOps resilientes</h3>
+            <p>Testes como parte do pipeline de entrega, com execução paralela, ambientes em contêineres e feedback rápido.</p>
+            <p class="row__tools">GitHub Actions, GitLab CI, Azure DevOps, Jenkins, Docker</p>
+          </div>
+          <div class="row">
+            <h3>APIs, dados e cenários de carga</h3>
+            <p>Contratos e fluxos de API validados, dados conferidos no banco e testes de carga com visão estratégica.</p>
+            <p class="row__tools">Postman, Swagger, GraphQL, SQL, MongoDB, k6</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ COMPETÊNCIAS ============ -->
-    <section class="section section--alt" id="competencias">
-      <div class="container">
-        <span class="eyebrow">Competências e ferramentas</span>
-        <h2>O que uso no dia a dia.</h2>
-        <div class="grid grid--3">
-          <div class="skill reveal"><h3>Automação</h3><div class="chips chips--sm"><span>Cypress</span><span>Playwright</span><span>Cucumber</span><span>Capybara</span></div></div>
-          <div class="skill reveal"><h3>Linguagens e dados</h3><div class="chips chips--sm"><span>JavaScript</span><span>TypeScript</span><span>GraphQL</span><span>MySQL</span><span>SQL Server</span></div></div>
-          <div class="skill reveal"><h3>CI/CD</h3><div class="chips chips--sm"><span>GitLab</span><span>GitHub Actions</span><span>Jenkins</span><span>Azure DevOps</span></div></div>
-          <div class="skill reveal"><h3>APIs</h3><div class="chips chips--sm"><span>Postman</span><span>Swagger</span><span>GraphQL</span></div></div>
-          <div class="skill reveal"><h3>Performance e infra</h3><div class="chips chips--sm"><span>k6</span><span>Docker</span></div></div>
-          <div class="skill reveal"><h3>Mobile</h3><div class="chips chips--sm"><span>Android</span><span>iOS</span></div></div>
-        </div>
+    <!-- ============ STACK E FORMAÇÃO ============ -->
+    <section class="section section--rule" id="stack">
+      <div class="wrap">
+        <h2>Stack e formação</h2>
 
-        <h3 class="subhead">Certificações e formação</h3>
-        <div class="grid grid--4">
-          <div class="cert reveal"><b>AZ-900</b><span>Microsoft Azure Fundamentals</span></div>
-          <div class="cert reveal"><b>AppSec</b><span>Application Security</span></div>
-          <div class="cert reveal"><b>Six Sigma</b><span>Yellow Belt</span></div>
-          <div class="cert reveal"><b>MBA</b><span>Pós-graduação</span></div>
+        <dl class="stack">
+          <div><dt>Automação</dt><dd>Playwright, Cypress, Appium, Cucumber (BDD), Capybara</dd></div>
+          <div><dt>Linguagens e dados</dt><dd>TypeScript, JavaScript, GraphQL, SQL Server, MySQL, MongoDB</dd></div>
+          <div><dt>CI/CD</dt><dd>GitHub Actions, GitLab CI, Azure DevOps, Jenkins</dd></div>
+          <div><dt>APIs</dt><dd>Postman, Swagger, GraphQL</dd></div>
+          <div><dt>Performance e infra</dt><dd>k6, Docker, AWS, Azure</dd></div>
+          <div><dt>Gestão</dt><dd>Jira, Git, GitLab</dd></div>
+        </dl>
+
+        <div class="edu">
+          <div>
+            <h3>Formação</h3>
+            <ul>
+              <li><time>2023 a 2024</time><span><b>MBA em Gestão da Qualidade de Software</b><br />Anhanguera</span></li>
+              <li><time>2023</time><span><b>Pós-graduação em Engenharia de Software, com ênfase em qualidade e teste</b><br />Anhanguera</span></li>
+              <li><time>2010 a 2014</time><span><b>Bacharelado em Ciência da Computação</b><br />Faculdade Pitágoras</span></li>
+              <li><time>2021 a 2022</time><span><b>Desenvolvedor Full Stack Node</b><br />Digital House Brasil</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Certificações</h3>
+            <ul>
+              <li><time>2024</time><span><b>Application Security Training</b><br />Conviso Application Security</span></li>
+              <li><time>2024</time><span><b>Formação Automação de Testes com Cypress</b><br />DIO</span></li>
+              <li><time>2022</time><span><b>Six Sigma Yellow Belt</b><br />6sigmastudy</span></li>
+              <li><time>2022</time><span><b>Scrum Fundamentals Certified</b><br />VMEdu</span></li>
+              <li><time>2021</time><span><b>Lean Six Sigma White Belt</b><br />Escola EDTI</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ============ CONTATO ============ -->
-    <section class="section" id="contato">
-      <div class="container contact reveal">
-        <h2>Vamos conversar?</h2>
-        <p class="contact__lead">Atuo de forma remota, no Brasil e no exterior. Escolha o canal que preferir.</p>
+    <section class="section section--rule" id="contato">
+      <div class="wrap">
+        <h2 class="contact__title">Vamos conversar?</h2>
+        <p class="section__lead">Atuo de forma remota, no Brasil e no exterior. Escolha o canal que preferir.</p>
 
         <div class="contact__grid">
           <div class="scenario">
@@ -224,17 +253,14 @@
             <a class="channel" href="mailto:lizarbventurim@gmail.com">
               <span class="channel__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
               <span class="channel__text"><b>E-mail</b><span>lizarbventurim@gmail.com</span></span>
-              <span class="channel__go" aria-hidden="true">↗</span>
             </a>
             <a class="channel" href="https://www.linkedin.com/in/lizarbventurim/" target="_blank" rel="noopener">
               <span class="channel__icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></span>
               <span class="channel__text"><b>LinkedIn</b><span>in/lizarbventurim</span></span>
-              <span class="channel__go" aria-hidden="true">↗</span>
             </a>
             <a class="channel" href="https://github.com/lizarbventurim" target="_blank" rel="noopener">
               <span class="channel__icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.8 1.18 1.82 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></span>
               <span class="channel__text"><b>GitHub</b><span>lizarbventurim</span></span>
-              <span class="channel__go" aria-hidden="true">↗</span>
             </a>
           </div>
         </div>
@@ -243,9 +269,9 @@
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <span>© <span id="ano">2026</span> Lizarb · QA Sênior · Brasil</span>
-      <a href="#topo">Voltar ao topo ↑</a>
+    <div class="wrap footer__inner">
+      <span>© <span id="ano">2026</span> Lizarb. Senior QA Engineer, Brasil.</span>
+      <a href="#topo">Voltar ao topo</a>
     </div>
   </footer>
 
