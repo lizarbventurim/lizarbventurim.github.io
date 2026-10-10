@@ -243,3 +243,17 @@ h2::before{content:"# ";color:var(--accent)}
 @keyframes drift1{to{transform:translate(18vw,14vh)}}
 @keyframes drift2{to{transform:translate(-16vw,-12vh)}}
 @media (prefers-reduced-motion:reduce){.blob{animation:none}}
+
+/* Projeto de demonstração */
+.project{display:grid;grid-template-columns:48px 1fr auto;gap:20px;align-items:center;margin-top:20px;padding:22px;border:1px solid var(--line-strong);border-left:3px solid var(--accent);border-radius:10px;background:var(--surface)}
+.project__icon{width:48px;height:48px;border-radius:10px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent)}
+.project__icon svg{width:24px;height:24px}
+.project__label{font-family:var(--mono);font-size:.74rem;color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.project h3{font-size:1.1rem;margin:2px 0 6px}
+.project__desc{color:var(--muted);font-size:.95rem;max-width:62ch}
+.project__tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.project__tags li{font-family:var(--mono);font-size:.74rem;color:#dfe6e1;border:1px solid var(--line-strong);border-radius:999px;padding:3px 10px}
+.project__side{display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+.project__badge{display:block;line-height:0}
+@media (max-width:900px){.project{grid-template-columns:48px 1fr}.project__side{grid-column:1 / -1;flex-direction:row;align-items:center;justify-content:space-between}}
+.project .btn{white-space:nowrap}
