@@ -89,9 +89,6 @@ h2::before{content:"# ";color:var(--accent)}
 .timeline ul li{display:block;position:relative;padding:0 0 6px 20px;color:#c9d3cc;font-size:1rem}
 .timeline ul li::before{content:"-";position:absolute;left:0;top:0;width:auto;height:auto;background:none;color:var(--accent)}
 
-.timeline__more{margin:22px 0 0 7px;font-family:var(--mono);font-size:.9rem}
-.timeline__more a{color:var(--accent);border-bottom:1px solid var(--accent)}
-.timeline__more a:hover{color:#ffc656;border-color:#ffc656}
 .earlier{margin:8px 0 0 7px;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
 .earlier summary{cursor:pointer;padding:14px 18px;font-family:var(--mono);font-size:.9rem;color:var(--accent)}
 .earlier ul{padding:0 18px 12px}
