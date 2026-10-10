@@ -65,8 +65,8 @@ h2::before{content:"# ";color:var(--accent)}
 .section--rule{border-top:1px solid var(--line)}
 
 /* Fluxo */
-.pipe{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:48px;padding:20px;border:1px dashed var(--line-strong);border-radius:8px;font-family:var(--mono)}
-.pipe div{padding:10px 18px;border:1px solid var(--line-strong);border-radius:6px;background:var(--surface)}
+.pipe{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:48px;padding:20px;border:1px dashed var(--line-strong);border-radius:8px;font-family:var(--mono)}
+.pipe div{text-align:center;padding:10px 18px;border:1px solid var(--line-strong);border-radius:6px;background:var(--surface)}
 .pipe b{display:block;font-size:.95rem;color:#fff}
 .pipe small{color:var(--muted);font-size:.78rem}
 .pipe i{font-style:normal;color:var(--accent);font-size:1.1rem}
