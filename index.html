@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lizarb | QA Sênior</title>
+  <meta name="description" content="Lizarb — QA Sênior com 10+ anos de experiência. Automação E2E com Cypress e Playwright, testes de API, pipelines QAOps, testes mobile e performance com k6." />
+  <meta property="og:title" content="Lizarb | QA Sênior" />
+  <meta property="og:description" content="Qualidade desde o início do desenvolvimento: automação, APIs, QAOps e testes mobile." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="topo">
+    <div class="container nav__inner">
+      <a href="#inicio" class="brand"><span class="brand__mark">LZ</span> Lizarb</a>
+      <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav class="nav__links" id="menu">
+        <a href="#inicio">Início</a>
+        <a href="#atuacao">Como atuo</a>
+        <a href="#perfil">Perfil</a>
+        <a href="#entregas">Entregas</a>
+        <a href="#competencias">Competências</a>
+        <a href="#contato" class="btn btn--small">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__text reveal">
+          <span class="eyebrow">QA Sênior · Automação · QAOps</span>
+          <h1>Qualidade que nasce <span class="grad">no início</span> do desenvolvimento, não no fim.</h1>
+          <p class="lead">
+            Mais de <strong>10 anos</strong> garantindo a qualidade de produtos de multinacionais.
+            Combino <strong>testes manuais</strong> (exploratórios, usabilidade, casos críticos) com
+            <strong>automação</strong> em Cypress e Playwright, valido <strong>APIs</strong>,
+            construo <strong>pipelines QAOps</strong> e levo qualidade para o código desde o refinamento
+            (<em>Shift Left</em>).
+          </p>
+          <div class="hero__cta">
+            <a href="#atuacao" class="btn">Como atuo →</a>
+            <a href="#contato" class="btn btn--ghost">Vamos conversar</a>
+          </div>
+          <div class="chips">
+            <span>Cypress</span><span>Playwright</span><span>API</span><span>QAOps</span><span>Mobile</span><span>k6</span><span>Shift Left</span>
+          </div>
+        </div>
+
+        <div class="terminal reveal" aria-hidden="true">
+          <div class="terminal__bar"><i></i><i></i><i></i><span>~/portfolio</span></div>
+          <pre id="term"><span class="p">$</span> npx playwright test --project=chromium
+<span class="ok">✔</span> login.spec.ts .......... passou
+<span class="ok">✔</span> checkout.spec.ts ....... passou
+<span class="ok">✔</span> api/contracts.spec.ts .. passou
+
+<span class="p">$</span> k6 run load-test.js
+<span class="ok">✔</span> thresholds ............. ok
+
+<span class="p">$</span> git push origin main
+<span class="ok">✔</span> pipeline: lint → e2e → deploy
+<span class="cursor">▋</span></pre>
+        </div>
+      </div>
+
+      <div class="container stats reveal">
+        <div><strong>10+</strong><span>anos em qualidade de software</span></div>
+        <div><strong>E2E · API · Mobile</strong><span>cobertura ponta a ponta</span></div>
+        <div><strong>4</strong><span>plataformas de CI/CD</span></div>
+        <div><strong>3</strong><span>certificações</span></div>
+      </div>
+    </section>
+
+    <!-- ============ COMO ATUO ============ -->
+    <section class="section" id="atuacao">
+      <div class="container">
+        <span class="eyebrow">Como atuo como QA</span>
+        <h2>Qualidade é responsabilidade do time, não de uma etapa.</h2>
+        <p class="sub">Meu trabalho não começa quando a tarefa chega em teste. Atuo junto de Produto e Desenvolvimento desde o refinamento, para o time inteiro entregar a mesma coisa.</p>
+
+        <div class="flow reveal">
+          <div><b>Produto</b><small>regra de negócio</small></div><span>⇄</span>
+          <div class="flow__qa"><b>QA</b><small>questiona e valida</small></div><span>⇄</span>
+          <div><b>Dev</b><small>solução e testes</small></div><span>→</span>
+          <div><b>Usuário</b><small>recebe valor</small></div>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card reveal"><em>01 · shift-left</em><h3>Qualidade desde o início</h3><p>Analiso demandas antes do código: ambiguidades, exceções e riscos aparecem quando ainda é barato corrigir.</p></article>
+          <article class="card reveal"><em>02 · automação</em><h3>Testes que escalam</h3><p>Suítes E2E estáveis em Cypress e Playwright, com padrões de projeto, dados controlados e execução paralela.</p></article>
+          <article class="card reveal"><em>03 · qaops</em><h3>Qualidade no pipeline</h3><p>Testes rodando a cada commit em Jenkins, Azure DevOps, GitLab e GitHub Actions, com feedback rápido para o time.</p></article>
+          <article class="card reveal"><em>04 · equilíbrio</em><h3>Automação + manual</h3><p>Automatizo o que vale a pena repetir. O tempo restante vai para exploratório, usabilidade e casos críticos.</p></article>
+          <article class="card reveal"><em>05 · confiabilidade</em><h3>Performance e APIs</h3><p>Contratos validados com Postman e Swagger, e testes de carga com k6 para garantir escalabilidade.</p></article>
+          <article class="card reveal"><em>06 · cultura</em><h3>Melhoria contínua</h3><p>Visão analítica e orientada a resultados, com Six Sigma Yellow Belt aplicado à qualidade de processos.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PERFIL ============ -->
+    <section class="section section--alt" id="perfil">
+      <div class="container profile">
+        <div class="reveal">
+          <span class="eyebrow">Perfil profissional</span>
+          <h2>Técnica e processo no mesmo teste.</h2>
+          <p>Sou <strong>Senior QA Engineer</strong> com mais de 10 anos de experiência, transformando qualidade em software por meio de automação, práticas modernas de engenharia e metodologias ágeis, em produtos de multinacionais com foco em confiabilidade, escalabilidade e eficiência.</p>
+          <p>Tenho forte atuação em <strong>ambientes distribuídos</strong> e na integração de pipelines, contribuindo diretamente para a estabilidade e a entrega contínua. Meu perfil é analítico e orientado a resultados, com foco constante em evolução técnica e em acompanhar as tendências do mercado.</p>
+          <div class="pills">
+            <div><strong>10+ anos</strong><span>em QA e automação</span></div>
+            <div><strong>MBA</strong><span>formação</span></div>
+            <div><strong>AZ-900 · AppSec · Six Sigma</strong><span>certificações</span></div>
+          </div>
+        </div>
+
+        <aside class="timeline reveal">
+          <h3>Trajetória</h3>
+          <!-- EDITAR: substitua pelos seus cargos e empresas reais (LinkedIn) -->
+          <div class="tl">
+            <time>[EDITAR · ano – atual]</time>
+            <h4>Senior QA Engineer · [Empresa]</h4>
+            <ul>
+              <li>[EDITAR] Evolução da suíte E2E com Cypress/Playwright</li>
+              <li>[EDITAR] Pipelines QAOps e redução de falhas em produção</li>
+              <li>[EDITAR] Testes de API, mobile e performance</li>
+            </ul>
+          </div>
+          <div class="tl">
+            <time>[EDITAR · ano – ano]</time>
+            <h4>QA Engineer · [Empresa]</h4>
+            <ul>
+              <li>[EDITAR] Principais entregas e resultados</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ ENTREGAS ============ -->
+    <section class="section" id="entregas">
+      <div class="container">
+        <span class="eyebrow">Resultados que entrego</span>
+        <h2>O que eu coloco de pé nos times.</h2>
+        <div class="grid grid--2">
+          <article class="project reveal">
+            <div class="project__tag">01 · E2E</div>
+            <h3>Testes end-to-end completos</h3>
+            <p>Suítes em Cypress e Playwright com BDD (Cucumber), page objects e execução em CI, reduzindo regressão manual e falhas em produção.</p>
+            <div class="chips chips--sm"><span>Cypress</span><span>Playwright</span><span>Cucumber</span><span>TypeScript</span></div>
+          </article>
+          <article class="project reveal">
+            <div class="project__tag">02 · API</div>
+            <h3>Validação robusta de APIs</h3>
+            <p>Testes de contrato e de fluxo com Postman e Swagger, incluindo GraphQL e validação de dados em MySQL e SQL Server.</p>
+            <div class="chips chips--sm"><span>Postman</span><span>Swagger</span><span>GraphQL</span><span>SQL</span></div>
+          </article>
+          <article class="project reveal">
+            <div class="project__tag">03 · QAOps</div>
+            <h3>Pipelines de qualidade</h3>
+            <p>Implementação e evolução de pipelines com gates de qualidade, execução paralela e ambientes em contêineres.</p>
+            <div class="chips chips--sm"><span>Jenkins</span><span>Azure DevOps</span><span>GitLab</span><span>GitHub Actions</span><span>Docker</span></div>
+          </article>
+          <article class="project reveal">
+            <div class="project__tag">04 · Mobile & Performance</div>
+            <h3>Estabilidade e experiência do usuário</h3>
+            <p>Testes móveis em Android e iOS com foco em estabilidade, e testes de carga com k6 para validar escalabilidade.</p>
+            <div class="chips chips--sm"><span>Android</span><span>iOS</span><span>k6</span></div>
+          </article>
+        </div>
+        <p class="note">Quer ver código? <a href="https://github.com/SEU-USUARIO" target="_blank" rel="noopener">Meu GitHub ↗</a></p>
+      </div>
+    </section>
+
+    <!-- ============ COMPETÊNCIAS ============ -->
+    <section class="section section--alt" id="competencias">
+      <div class="container">
+        <span class="eyebrow">Competências e ferramentas</span>
+        <h2>O que uso no dia a dia.</h2>
+        <div class="grid grid--3">
+          <div class="skill reveal"><h3>Automação</h3><div class="chips chips--sm"><span>Cypress</span><span>Playwright</span><span>Cucumber</span><span>Capybara</span></div></div>
+          <div class="skill reveal"><h3>Linguagens e dados</h3><div class="chips chips--sm"><span>JavaScript</span><span>TypeScript</span><span>GraphQL</span><span>MySQL</span><span>SQL Server</span></div></div>
+          <div class="skill reveal"><h3>CI/CD</h3><div class="chips chips--sm"><span>GitLab</span><span>GitHub Actions</span><span>Jenkins</span><span>Azure DevOps</span></div></div>
+          <div class="skill reveal"><h3>APIs</h3><div class="chips chips--sm"><span>Postman</span><span>Swagger</span><span>GraphQL</span></div></div>
+          <div class="skill reveal"><h3>Performance e infra</h3><div class="chips chips--sm"><span>k6</span><span>Docker</span></div></div>
+          <div class="skill reveal"><h3>Mobile</h3><div class="chips chips--sm"><span>Android</span><span>iOS</span></div></div>
+        </div>
+
+        <h3 class="subhead">Certificações e formação</h3>
+        <div class="grid grid--4">
+          <div class="cert reveal"><b>AZ-900</b><span>Microsoft Azure Fundamentals</span></div>
+          <div class="cert reveal"><b>AppSec</b><span>Application Security</span></div>
+          <div class="cert reveal"><b>Six Sigma</b><span>Yellow Belt</span></div>
+          <div class="cert reveal"><b>MBA</b><span>Pós-graduação</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="section" id="contato">
+      <div class="container contact reveal">
+        <span class="eyebrow">Open to work</span>
+        <h2>Vamos conversar?</h2>
+        <p class="sub">Procuro times que levem qualidade a sério desde o requisito. Fale comigo pelos canais abaixo.</p>
+        <div class="links">
+          <!-- EDITAR: troque pelos seus links reais -->
+          <a href="mailto:seu-email@exemplo.com"><small>E-mail</small><b>seu-email@exemplo.com ↗</b></a>
+          <a href="https://www.linkedin.com/in/SEU-USUARIO" target="_blank" rel="noopener"><small>LinkedIn</small><b>in/seu-usuario ↗</b></a>
+          <a href="https://github.com/SEU-USUARIO" target="_blank" rel="noopener"><small>GitHub</small><b>SEU-USUARIO ↗</b></a>
+        </div>
+        <!-- Opcional: adicione seu currículo em assets/ e descomente
+        <a class="btn btn--ghost" href="assets/Curriculo_Lizarb.pdf" download>Baixar currículo (PDF)</a> -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© <span id="ano">2026</span> Lizarb · QA Sênior · Brasil</span>
+      <a href="#topo">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
