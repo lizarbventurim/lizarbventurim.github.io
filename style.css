@@ -80,11 +80,11 @@ h2::before{content:"# ";color:var(--accent)}
 
 /* Linha do tempo */
 .timeline{border-left:1px solid var(--line-strong);margin-left:6px}
-.timeline li{position:relative;display:grid;grid-template-columns:190px 1fr;gap:28px;padding:0 0 40px 32px}
+.timeline li{position:relative;display:grid;grid-template-columns:190px 1fr;gap:28px;padding:0 0 30px 32px}
 .timeline li::before{content:"";position:absolute;left:-5px;top:7px;width:9px;height:9px;background:var(--accent)}
 .timeline time{font-family:var(--mono);font-size:.82rem;color:var(--accent);padding-top:3px}
 .timeline h3{font-size:1.08rem}
-.timeline__org{color:var(--muted);margin:2px 0 12px}
+.timeline__org{color:var(--muted);margin:2px 0 0}
 .timeline ul{list-style:none}
 .timeline ul li{display:block;position:relative;padding:0 0 6px 20px;color:#c9d3cc;font-size:1rem}
 .timeline ul li::before{content:"-";position:absolute;left:0;top:0;width:auto;height:auto;background:none;color:var(--accent)}
