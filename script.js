@@ -96,3 +96,14 @@ document.getElementById('ano').textContent = new Date().getFullYear();
   addEventListener('resize', build);
   build(); draw();
 })();
+
+// Entrada suave dos blocos ao rolar
+(() => {
+  const els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  const io = new IntersectionObserver((es) => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: 0.12 });
+  els.forEach(el => io.observe(el));
+})();
