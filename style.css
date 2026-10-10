@@ -99,7 +99,9 @@ h2{font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.2;font-weight:800;letter-spa
 .tl::before{content:"";position:absolute;left:-6px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--accent)}
 .tl time{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--accent)}
 .tl h4{margin:4px 0 8px;font-size:1rem}
-.tl ul{padding-left:18px;color:var(--muted);font-size:.9rem}
+.tl__meta{margin:-4px 0 8px;color:var(--muted);font-size:.85rem}
+.tl ul{padding-left:18px;color:#c3cbea;font-size:.92rem}
+.tl li{margin-bottom:4px}
 
 /* CONTACT */
 .contact h2{max-width:none;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.08;margin-bottom:16px}
