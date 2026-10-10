@@ -1,7 +1,7 @@
-# lizarbventurim.github.io
+# lizarb.venturim.me
 
 Meu site pessoal: portfólio de QA e automação de testes.
 
-🌐 https://lizarbventurim.github.io · 🇺🇸 https://lizarbventurim.github.io/en/
+🌐 https://lizarb.venturim.me · 🇺🇸 https://lizarb.venturim.me/en/
 
 Site estático (HTML, CSS e JS), publicado com GitHub Pages.
